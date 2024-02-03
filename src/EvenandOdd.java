@@ -1,41 +1,38 @@
-package EvenandOdd;
+
 
 import java.util.Scanner;
 
 public class EvenandOdd {
-	
 	public static void main(String[] args) {
-		
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter any number:");
-		int n= sc.nextInt();
-		
-		if (n%2==0) {
-			
-			System.out.println("Entered number is Even");
-			
-		} else {
-			
-			System.out.println("Entered number is Odd");
-
+		System.out.println("Enter the size of the array-");
+		int n=sc.nextInt();
+		int arr[]=new int[n];
+		System.out.println("Enter the elements of the array-");
+		for(int i=0;i<n;i++) {
+			arr[i]=sc.nextInt();
 		}
 		
-		
-		
-	}
-	
-	
-	
-	/*public static void main(String[] args) {
-		System.out.println("Enter any number");
-		Scanner sc = new Scanner(System.in);
-		int i = sc.nextInt();
-		if (i%2 == 0) {
-			System.out.println("Entered number is even");
+		System.out.println("Array is-");
+		for(int i=0;i<n;i++) {
 			
-		}else {
-			System.out.println("Entered number is odd");
-		}	
-	}*/
+			System.out.print(arr[i]+" ");
+			
+		}
+		System.out.println();
+		System.out.println("Even numbers-");
+		for(int i=0;i<n;i++) {
+			if((arr[i]%2)==0) {
+				System.out.print(arr[i]+" ");
+			}
+		}
+		System.out.println();
+		System.out.println("Odd numbers-");
+		for(int i=0;i<n;i++) {
+			if((arr[i]%2)!=0) {
+				System.out.print(arr[i]+" ");
+			}
+		}
+}
 
 }
